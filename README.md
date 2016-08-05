@@ -1,2 +1,2 @@
-# Face-Radomizer
-Jquery Build to randomize faces. 
+# Default Setup
+'Blank' Repo to fork for quick startup.
