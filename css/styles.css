@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+}
+
+.random {
+  margin: 0 auto;
+  width: 50vw;
+}
+.random h3 {
+  padding: 10px 15px;
+  background-color: #ebebeb;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.sliderWrapper {
+  margin: 0 auto;
+  width: 50vw;
+  background-color: #ebebeb;
+  position: relative;
+}
+.sliderWrapper .sliderPiece {
+  overflow: hidden;
+  height: 100px;
+  border-bottom: 0 solid #fff;
+  position: relative;
+  transition: all ease .5s;
+}
+.sliderWrapper .sliderPiece .sliderTrack {
+  transition: all ease .5s;
+}
+.sliderWrapper .sliderPiece .prevBtn {
+  font-size: 25px;
+  top: calc(50% - 1em);
+  left: 1em;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background: #ebebeb;
+}
+.sliderWrapper .sliderPiece .nextBtn {
+  font-size: 25px;
+  top: calc(50% - 1em);
+  right: 1em;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background: #ebebeb;
+}
+
+img {
+  width: 100%;
+}
+
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 1;
+  z-index: 1000;
+}
+
+.loader.finished {
+  transition: opacity ease 1s;
+  opacity: 0;
+}
+
+.spinner {
+  animation: rotator 2.4s linear infinite;
+}
+
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash 2.4s ease-in-out infinite, colors 9.6s ease-in-out infinite;
+}
+
+@keyframes colors {
+  0% {
+    stroke: #4285F4;
+  }
+  25% {
+    stroke: #DE3E35;
+  }
+  50% {
+    stroke: #F7C223;
+  }
+  75% {
+    stroke: #1B9A59;
+  }
+  100% {
+    stroke: #4285F4;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
+}
