@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var numOfTeam = 6,
+  var numOfTeam = 15,
     numOfTracks = 3,
     teamMembers = [],
     wrapperWidth = $('.sliderWrapper').width(),
