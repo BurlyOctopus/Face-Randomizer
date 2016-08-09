@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var numOfTeam = 15,
+  var numOfTeam = 6,
     numOfTracks = 3,
     teamMembers = [],
     wrapperWidth = $('.sliderWrapper').width(),
@@ -62,8 +62,8 @@ function initializeSlider(){
    for (var i = 0; i < numOfTeam; i++) {
       teamMembers.push({
           id: i,
-          image: 'https://api.adorable.io/avatars/1000/' + i + '.png',
-          // image: teamImages[i],
+          // image: 'https://api.adorable.io/avatars/1000/' + i + '.png',
+          image: teamImages[i],
       });
   }
   for (var i = 0; i < numOfTracks; i++) {
